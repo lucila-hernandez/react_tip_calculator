@@ -35,10 +35,9 @@ function App() {
       />
 
       <div>
-        <p>Bill Amount: ${billAmount.toFixed(2)}</p>
         <p>Tip Total: ${tipTotal.toFixed(2)}</p>
-        <p>Total Amount: ${total.toFixed(2)}</p>
-        <p>Each Person Pays: ${splitTotal.toFixed(2)}</p>
+        <p>Bill Total: ${billAmount.toFixed(2)}</p>
+        <p>Per Person Amount: ${splitTotal.toFixed(2)}</p>
       </div>
     </div>
   );
