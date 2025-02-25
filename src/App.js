@@ -15,18 +15,21 @@ function App() {
   return (
     <div className="App">
       <h2>Tip Calculator</h2>
+      <label>Bill Amount: </label>
       <input 
       placeholder='Bill Amount'
       type='number'
       value={billAmount}
       onInput={(e) => setBillAmount(parseFloat(e.target.value))}
       />
+      <label>Tip %: </label>
       <input 
       placeholder='Tip Percent'
       type='number'
       value={tipAmount}
       onInput={(e) => setTipAmount(parseFloat(e.target.value))}
       />
+      <label>Numer of People: </label>
       <input 
       placeholder='Number of People'
       type='number'
