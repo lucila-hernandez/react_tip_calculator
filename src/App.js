@@ -2,45 +2,43 @@ import './App.css';
 import { useState } from "react";
 
 function App() {
-  // billAmount, tipPercent, people
   const [billAmount, setBillAmount] = useState(10.00);
   const [tipAmount, setTipAmount] = useState(15.00);
   const [peopleAmount, setPeopleAmount] = useState(1);
 
   const tipTotal = billAmount * (tipAmount / 100);
   const total = billAmount + tipTotal;
-  const splitTotal = peopleAmount > 0 ? total / peopleAmount : 0; // Avoid division by zero
+  const splitTotal = peopleAmount > 0 ? total / peopleAmount : 0;
 
   return (
     <div className="App">
-      <h2>Tip Calculator</h2>
+      <h2 className="title">Tip Calculator</h2>
       <div className="container">
         <div className="input-section">
           <div className="left-inputs">
-            <label>Bill Amount: </label>
+            <label>Bill</label>
             <input
-              placeholder='Bill Amount'
-              type='number'
+              type="number"
               value={billAmount}
               onInput={(e) => setBillAmount(parseFloat(e.target.value))}
             />
+
+            <label>Tip %</label>
             <div className="tip-input">
-              <label>Tip %: </label>
               <button onClick={() => setTipAmount(tipAmount - 1)}>-</button>
               <input
-                placeholder='Tip Percent'
-                type='number'
+                type="number"
                 value={tipAmount}
                 onInput={(e) => setTipAmount(parseFloat(e.target.value))}
               />
               <button onClick={() => setTipAmount(tipAmount + 1)}>+</button>
             </div>
+
+            <label>Number of People</label>
             <div className="people-input">
-              <label>Number of People: </label>
               <button onClick={() => setPeopleAmount(Math.max(1, peopleAmount - 1))}>-</button>
               <input
-                placeholder='Number of People'
-                type='number'
+                type="number"
                 value={peopleAmount}
                 onInput={(e) => setPeopleAmount(parseInt(e.target.value))}
               />
