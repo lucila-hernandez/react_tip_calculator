@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from "react";
 
 function App() {
-  const [billAmount, setBillAmount] = useState(10.00);
+  const [billAmount, setBillAmount] = useState(0.00);
   const [tipAmount, setTipAmount] = useState(15.00);
   const [peopleAmount, setPeopleAmount] = useState(1);
 
@@ -16,7 +16,7 @@ function App() {
       <div className="container">
         <div className="input-section">
           <div className="left-inputs">
-            <label>Bill</label>
+            <label>Bill Amount</label>
             <input
               type="number"
               value={billAmount}

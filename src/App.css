@@ -20,15 +20,15 @@
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Adjusted width */
+  width: 450px; 
   display: flex;
-  flex-direction: column;
+  flex-direction: row; 
+  justify-content: space-between;
 }
 
 .input-section {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  width: 100%;
 }
 
 .left-inputs {
@@ -36,38 +36,37 @@
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
-  width: 100%;
+  width: 50%;
 }
 
 .left-inputs label {
   font-weight: bold;
   display: block;
-  margin-bottom: 5px;
 }
 
 .left-inputs input {
-  width: 150px; /* Smaller input boxes */
+  width: 100px; 
   padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  text-align: center;
 }
 
 .tip-input,
 .people-input {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .tip-input input,
 .people-input input {
-  width: 100px; /* Adjusted width */
+  width: 60px;
   text-align: center;
 }
 
 button {
-  background-color: #4caf50;
-  color: white;
+  background-color: rgb(224, 231, 231);
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -75,18 +74,30 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: grey;
+}
+
+.separator {
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 20px;
 }
 
 .right-totals {
+  width: 50%;
   text-align: left;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  width: 100%;
+  padding-left: 20px;
 }
 
 .right-totals p {
   font-size: 16px;
   font-weight: bold;
   margin: 8px 0;
+}
+
+.separator {
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 20px;
+  height: 100%; /* Full height to stretch between the two sections */
 }
